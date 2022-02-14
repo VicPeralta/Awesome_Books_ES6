@@ -1,1 +1,316 @@
-/* Start  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+:root {
+  --border-color: #011640;
+  --dark-background: #2f5373;
+  --soft-background: #a7cff2;
+  --main-text: #fff;
+  --dark-text: #537fa6;
+  --highlighted-text: #91b7d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--soft-background);
+  color: var(--main-text);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 99vh;
+}
+
+body > * {
+  flex: 1 1 auto;
+}
+
+.active {
+  display: block;
+}
+
+section {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 14px;
+  width: 100%;
+  min-height: 14vh;
+  background-color: inherit;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 8px 16px;
+}
+
+.navlinks {
+  display: flex;
+}
+
+.navlinks li {
+  margin-left: 8px;
+  border-right: 2px solid black;
+  padding-right: 8px;
+}
+
+.selected {
+  font-weight: bold;
+  color: steelblue;
+}
+
+.navlinks li:last-child {
+  border: none;
+  padding-right: 0;
+}
+
+.datetime {
+  text-align: right;
+  padding: 8px 0;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow-y: hidden;
+}
+
+#book-list {
+  width: 100%;
+  text-align: center;
+  padding: 1%;
+  overflow-y: scroll;
+}
+
+#book-list h1 {
+  margin-bottom: 24px;
+}
+
+.books-container {
+  border: 2px solid rgb(0, 0, 0);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.book-card {
+  display: flex;
+  padding: 2%;
+  flex-wrap: wrap;
+  margin: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.book-card.over {
+  border: 3px dotted red;
+}
+
+.book-card:nth-child(odd) {
+  background-color: var(--dark-background);
+}
+
+.book-card:nth-child(even) {
+  background-color: var(--soft-background);
+}
+
+.book-card li:last-child {
+  flex: 1;
+  text-align: end;
+}
+
+.author {
+  background-color: inherit;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.title {
+  background-color: inherit;
+  font-size: 1.1rem;
+}
+
+.title::before {
+  content: '"';
+}
+
+.title::after {
+  content: '" by ';
+  white-space: pre;
+}
+
+.remove-book {
+  padding: 8px 16px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  margin-right: 10px;
+  margin-left: auto;
+  border-radius: 4px;
+  color: var(--main-text);
+  font-size: 1.05rem;
+  background-color: var(--soft-background);
+}
+
+.remove-book:hover {
+  background-color: var(--dark-background);
+}
+#add {
+  width: 40%;
+  overflow-y: auto;
+}
+
+#add h2 {
+  margin: 40px;
+  text-align: center;
+}
+
+.add-book {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.add-message {
+  align-self: flex-start;
+  padding: 8px;
+  font-size: large;
+}
+#add input {
+  border: 2px solid var(--border-color);
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+#add button {
+  padding: 10px 40px;
+  border: 1px solid var(--border-color);
+  background-color: var(--soft-background);
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+#add button:hover {
+  background-color: var(--dark-background);
+}
+
+#contact {
+  overflow-y: auto;
+  width: 100%;
+  color: var(--main-text);
+  background-color: var(--dark-background);
+  min-height: 40vh;
+  max-height: 200vh;
+  width: 80%;
+  border-radius: 8px;
+}
+
+#contact ul {
+  color: inherit;
+  background-color: inherit;
+}
+#contact ul li {
+  list-style: disc;
+  width: fit-content;
+  margin: 10px;
+  color: inherit;
+  background-color: inherit;
+  font-size: large;
+}
+
+#add li:last-child {
+  display: flex;
+  justify-content: end;
+}
+
+#contact h2 {
+  margin: 20px auto;
+  text-align: center;
+  background-color: inherit;
+}
+
+footer p {
+  padding: 16px;
+  border: 2px solid black;
+  width: 100%;
+  margin: 16px;
+}
+
+#contact p {
+  margin: 20px auto;
+  text-align: center;
+  background-color: inherit;
+}
+
+#contact ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+footer {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  #book-list {
+    width: 100%;
+  }
+
+  .books-container {
+    width: 95%;
+  }
+
+  #add {
+    width: 90%;
+  }
+
+  .book-card {
+    flex-direction: column;
+    padding: 2%;
+    flex-wrap: wrap;
+  }
+
+  .book-card li:last-child {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+  }
+}
