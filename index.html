@@ -11,7 +11,60 @@
 </head>
 
 <body>
-
+  <header>
+    <nav>
+      <h3>Awesome Books</h3>
+      <ul class="navlinks">
+        <li>
+          <a href="#book-list" class="selected">List</a>
+        </li>
+        <li>
+          <a href="#add">Add new</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="datetime">
+      <p>March 19th 2021, 9:25:32 am</p>
+    </div>
+  </header>
+  <main>
+    <section id="book-list" class="active">
+      <h1>All awesome Books</h1>
+      <template id="books-template">
+        <div class="book-card" draggable="true">
+          <p class="title">Book 1</p>
+          <p class="author">Test test</p>
+          <button type="button" class="remove-book" data-id="">Remove</button>
+        </div>
+      </template>
+      <div class="books-container">
+      </div>
+    </section>
+    <section id="add">
+      <h2>Add a new book</h2>
+      <div class="add-book">
+        <input type="text" name="title" id="title" placeholder="Title" required>
+        <input type="text" name="author" id="author" placeholder="Author" required>
+        <p class="add-message"></p>
+        <button type="button" class="add-btn">Add</button>
+      </div>
+    </section>
+    <section id="contact" class="">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or just want to say "Hello"? <br>You can reach out to us!</p>
+      <ul>
+        <li>Our email: victor.peralta.gomez@gmail.com, goss.leonardo3@gmail.com </li>
+        <li>Our phone number: 00 435 865 344 22</li>
+        <li>Our address: Streetname 22. 84503, City, Country</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright 2022 &#169; Leonardo Goss & Victor Peralta</p>
+  </footer>
 </body>
 
 </html>
