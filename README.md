@@ -20,7 +20,7 @@
 To get a local copy up and running follow these simple example steps.  
 
 1.- Clone the repository using this command:
-`git@github.com:git@github.com:VicPeralta/Awesome_Books_ES6.git` 
+`git clone git@github.com:VicPeralta/Awesome_Books_ES6.git` 
 
 2.- To see the main page open index.html with your Internet browser.  
 
