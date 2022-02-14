@@ -179,6 +179,7 @@ main {
 .remove-book:hover {
   background-color: var(--dark-background);
 }
+
 #add {
   width: 40%;
   overflow-y: auto;
@@ -202,6 +203,7 @@ main {
   padding: 8px;
   font-size: large;
 }
+
 #add input {
   border: 2px solid var(--border-color);
   padding: 5px;
@@ -227,7 +229,6 @@ main {
 
 #contact {
   overflow-y: auto;
-  width: 100%;
   color: var(--main-text);
   background-color: var(--dark-background);
   min-height: 40vh;
@@ -236,10 +237,6 @@ main {
   border-radius: 8px;
 }
 
-#contact ul {
-  color: inherit;
-  background-color: inherit;
-}
 #contact ul li {
   list-style: disc;
   width: fit-content;
@@ -280,6 +277,8 @@ footer p {
   align-items: flex-start;
   margin: 0 auto;
   width: fit-content;
+  color: inherit;
+  background-color: inherit;
 }
 
 footer {
